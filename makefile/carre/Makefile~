@@ -1,0 +1,9 @@
+sources=carre.cpp
+object=$(sources:.cpp=.o)
+
+CourbeCarre:$(objets)
+	g++ -L ~/espaces/travail/ProjLog/makefile/qcustomplot/sharedlib/compilation/ -l qcustomplot $^ -o $@ 
+
+carre.o:carre.cpp
+	g++ - I ~/espaces/travail/ProjLog/qcustomplot/sharelib/compilation -c $^ -o $@
+
